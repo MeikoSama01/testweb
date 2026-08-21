@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Production | Niu Lai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Production Data</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="characters.html">Characters</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="production.html">Production</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Production Details</h2>
+        <p>Manage and view the technical specifications of the Niu Lai production.</p>
+
+        <fieldset>
+            <legend>Add New Production Detail</legend>
+            <input type="text" id="newTitle" placeholder="Detail Title (e.g. VFX Team)">
+            <input type="text" id="newDetails" placeholder="Detail Description">
+            <button onclick="addRow()">Add to Table</button>
+        </fieldset>
+
+        <table id="productionTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productionTableBody">
+                <!-- Rows injected by script.js -->
+            </tbody>
+        </table>
+
+        <h3>Key Metadata</h3>
+        <ul>
+            <li><strong>Studio:</strong> Soldier Village</li>
+            <li><strong>Release Year:</strong> 2026</li>
+            <li><strong>Language:</strong> Mandarin / English</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 Niu Lai Movie Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

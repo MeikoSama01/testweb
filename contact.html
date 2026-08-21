@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact & Feedback | Niu Lai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="#1A1A1A">
+    <header>
+        <h1 style="font-size: 3em;">Contact & Community</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="characters.html">Characters</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="production.html">Production</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center;">Join the Niu Lai Community</h2>
+        <p>We would love to hear your thoughts on the "Golden Surrealism" journey.</p>
+
+        <!-- Fieldset & Legend Requirement -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="userName">Full Name:</label>
+            <input type="text" id="userName" name="userName" placeholder="Your Name">
+
+            <label for="userEmail">Email Address:</label>
+            <input type="email" id="userEmail" name="userEmail" placeholder="Your Email">
+
+            <label>Subscribe to our newsletter?</label>
+            <input type="checkbox" id="subscribe" name="subscribe" checked>
+            <span style="margin-left: 10px;">Yes, keep me updated!</span>
+        </fieldset>
+
+        <!-- Radio Buttons and Dropdowns -->
+        <fieldset>
+            <legend>Experience Survey</legend>
+            <p>What do you enjoy most about the trailer?</p>
+            <input type="radio" name="interest" id="visuals"> <label for="visuals" style="display:inline;">Visuals</label>
+            <input type="radio" name="interest" id="story"> <label for="story" style="display:inline;">Storyline</label>
+            <input type="radio" name="interest" id="music"> <label for="music" style="display:inline;">Music & Sound</label>
+
+            <div style="margin-top: 20px;">
+                <label for="region">Select your Region:</label>
+                <select id="region">
+                    <option value="sg">Singapore</option>
+                    <option value="my">Malaysia</option>
+                    <option value="th">Thailand</option>
+                    <option value="id">Indonesia</option>
+                    <option value="ph">Philippines</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Text Area Requirement -->
+        <fieldset>
+            <legend>Detailed Feedback</legend>
+            <label for="feedback">Tell us more about your thoughts:</label>
+            <textarea id="feedback" rows="6" placeholder="Tell us about your experience..."></textarea>
+        </fieldset>
+
+        <!-- Button Requirement -->
+        <button type="button" id="submitFeedback">Submit Feedback</button>
+        <div id="feedbackMessage" style="margin-top: 10px; color: var(--gold);"></div>
+
+        <hr style="margin: 40px 0;">
+
+        <!-- Multimedia Placeholders (Requirement check) -->
+        <h3>Multimedia Highlights</h3>
+        <p>Listen to the official theme music:</p>
+        <audio controls>
+            <source src="theme_music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p>Watch the official teaser:</p>
+        <video width="100%" controls>
+            <source src="teaser.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+
+        <!-- Links (Same page / Different page) -->
+        <div style="margin-top: 40px;">
+            <p>Quick Links:</p>
+            <ul>
+                <li><a href="#feedback">Jump to Feedback Form</a> (Same Page Link)</li>
+                <li><a href="index.html">Back to Home</a> (Different Page Link)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JS for Error Handling & Events -->
+    <script>
+        document.getElementById('submitFeedback').addEventListener('click', function() {
+            const name = document.getElementById('userName').value;
+            const feedback = document.getElementById('feedback').value;
+
+            if (name === "" || feedback === "") {
+                // Error Handling Requirement
+                document.getElementById('feedbackMessage').innerText = "Error: Please fill in both Name and Feedback fields.";
+                document.getElementById('feedbackMessage').style.color = "red";
+            } else {
+                document.getElementById('feedbackMessage').innerText = "Thank you for your feedback, " + name + "!";
+                document.getElementById('feedbackMessage').style.color = "var(--gold)";
+                document.getElementById('feedback').value = "";
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Niu Lai Movie Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

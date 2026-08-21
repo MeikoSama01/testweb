@@ -1,0 +1,159 @@
+/* Global Styles */
+:root {
+    --gold: #D4AF37;
+    --dark: #1A1A1A;
+    --cream: #FFFDD0;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Criterion 19: Font Face */
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark); /* Criterion 21: Font Color / Background */
+    color: var(--cream); /* Criterion 21: Font Color */
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--dark);
+    border-bottom: 2px solid var(--gold);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--gold);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 253, 208, 0.05);
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+/* Hero Section for Home Page */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('poster.webp');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 2px solid var(--gold);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+label {
+    margin-top: 10px;
+    color: var(--gold);
+    display: block;
+}
+
+input[type="text"], input[type="email"], textarea, select {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--gold);
+    width: 90%;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: var(--gold);
+    color: var(--dark);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--cream);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+    border-top: 1px solid var(--gold);
+}
